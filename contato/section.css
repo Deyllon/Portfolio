@@ -1,0 +1,8 @@
+
+.section__contato--inativo{
+   display: grid;
+   grid-template-columns: 80% 20%;
+   height: 15rem;
+   color: black;
+   margin-bottom: 1rem;
+}

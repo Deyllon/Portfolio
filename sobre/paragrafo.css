@@ -1,0 +1,11 @@
+.paragrafo__sobre{
+    margin-left: 2rem;
+    margin-top: 4rem;
+    transition: all .3s linear;
+}
+.paragrafo__sobre--inativo{
+    margin-top: 4rem;
+    position: fixed;
+    right: 100000rem;
+    transition: all .3s linear;
+}

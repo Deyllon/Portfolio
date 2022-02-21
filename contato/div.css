@@ -1,0 +1,17 @@
+.lista__contato--inativo{
+    position: fixed;
+    right: 1000rem;
+    
+}
+.lista__contato{
+    transition: all .3s linear;
+    margin-left: 2rem;
+    display: flex;
+}
+.item__contato{
+    width: 30%;
+    border: 2px solid black;
+    text-align: center;
+    height: 15rem;
+    margin-left: 1rem;
+}

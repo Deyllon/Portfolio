@@ -1,0 +1,7 @@
+.div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.div__sobre_contatos{
+    width: 50vw;
+}

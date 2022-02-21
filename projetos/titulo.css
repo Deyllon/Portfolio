@@ -1,0 +1,17 @@
+.titulo__projetos{
+    margin-top: 14rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.titulo__projetos--video{
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+.titulo__projetos--inativo{
+    margin-top: 14rem;
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: 2rem;
+    font-weight: bold;
+    transition: all .3s linear;
+}

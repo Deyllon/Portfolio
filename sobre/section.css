@@ -1,0 +1,13 @@
+.section__sobre{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    height: 15rem;
+    color: black;
+    
+}
+.section__sobre--inativo{
+    height: 15rem;
+    color: black;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
