@@ -6,8 +6,14 @@
     height: 2rem;
     transition: all .3s linear;
 }
+.titulo__contato:hover{
+    cursor: pointer;
+}
 .titulo_card__contato{
     margin-top: 2rem;
+}
+.titulo__contato--inativo:hover{
+    cursor: pointer;
 }
 .titulo__contato--inativo{
     font-size: 1.5rem;
@@ -17,4 +23,9 @@
     width: 5.5rem;
     height: 2rem;
     transition: all .3s linear;
+}
+@media screen and (max-width:767px){
+    .titulo_card__contato{
+        display: none;
+    }
 }

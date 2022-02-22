@@ -26,11 +26,7 @@
 </head>
 <body class="body">
     <header class="header__header">
-        <h1 class="titulo__header">Portfolio</h1>
-        <div class="div__header">
-            <h2 class="titulo__header titulo__header--email"><a class="link__header" href="mailto:deyllonp986@gmail.com">Email</a></h2>
-            <h2 class="titulo__header">Projetos</h2>
-        </div>
+        <h1 class="titulo__header">Portfolio de Deyllon ramos</h1>   
     </header> 
     <main class="main">   
        <div class="div">
@@ -63,9 +59,12 @@
             </div>
             <div>
                 <section class="section__projetos" >
-                    <h3 id="titulo__projeto" onclick="projeto()" class="titulo__projetos--inativo" >Projetos</h3>
-                    <ul id="lista_projeto" class="div_container__projetos--inativo">
-                        <li class="div__projetos">
+                    <ul id="lista_projeto" class="div_container__projetos">
+                        <li onclick="carrosel()" class="div__projetos">
+                            <h4 class="titulo__projetos--video">Thingram</h4>
+                            <iframe class="video__projetos" src="https://www.youtube.com/embed/3qH1VLixh4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </li>
+                        <li onclick="carrosel()" class="div__projetos">
                             <h4 class="titulo__projetos--video">Thingram</h4>
                             <iframe class="video__projetos" src="https://www.youtube.com/embed/3qH1VLixh4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </li>
@@ -115,23 +114,19 @@
             }
         }
     </script>    
+     
     <script>
-        function projeto(){
-            let titulo_projeto = document.getElementById('titulo__projeto')
-            let lista_projeto = document.getElementById('lista_projeto')
-            if (lista_projeto.className === 'div_container__projetos--inativo'){
-                titulo_projeto.classList.remove('titulo__projetos--inativo')
-                lista_projeto.classList.remove('div_container__projetos--inativo')
-                titulo_projeto.classList.add('titulo__projetos')
-                lista_projeto.classList.add('div_container__projetos')
+        let imagem = document.getElementById('lista_projeto')
+        let img = document.querySelectorAll('#lista_projeto li')
+        let imx = 0
+        function carrosel(){   
+            imx++
+            if(imx > img.length - 1){
+                imx = 0
             }
-            else{
-                titulo_projeto.classList.add('titulo__projetos--inativo')
-                lista_projeto.classList.add('div_container__projetos--inativo')
-                titulo_projeto.classList.remove('titulo__projetos')
-                lista_projeto.classList.remove('div_container__projetos')
-            }
+            imagem.style.transform = `translateX(${-imx * 100}%)`
         }
-    </script>  
+        
+    </script>
 </body>
 </html>

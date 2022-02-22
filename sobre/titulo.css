@@ -8,6 +8,9 @@
     transition: all .3s linear;
     
 }
+.titulo__sobre:hover{
+    cursor: pointer;
+}
 .titulo__sobre--inativo{
     margin-top: 5rem;
     font-size: 1.5rem;
@@ -15,5 +18,8 @@
     margin-left: 2rem;
     width: 4rem;
     transition: all .3s linear;
-    
+    height: 2rem;
+}
+.titulo__sobre--inativo:hover{
+    cursor: pointer;
 }

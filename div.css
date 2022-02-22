@@ -5,3 +5,11 @@
 .div__sobre_contatos{
     width: 50vw;
 }
+@media screen and (max-width:767px){
+    .div{
+        display: block;
+    }
+    .div__sobre_contatos{
+        width: 100vw;
+    }
+}

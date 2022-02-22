@@ -1,18 +1,40 @@
-.div__projetos{
-    margin-left: 0.5rem;
+.div__projetos{ 
     height: 19rem;
     border: 3px solid black;
     border-radius: 15px;
     text-align: center;
     margin-top: 5.5rem;
-    
+    width: 47vw;
+    box-sizing: border-box;
+    margin-right: 3vw;
+    background-color: #817c81;
 }
+.div__projetos:hover{
+    cursor: pointer;
+}
+    
 .div_container__projetos{
-    width: 100%;
-    margin-right: 2rem;
     transition: all .3s linear;
+    width: 100%;
+    display: -webkit-box;
 }
 .div_container__projetos--inativo{
     position: fixed;
     left: 1000rem;
+}
+@media screen and (max-width:767px){
+    .div_container__projetos{
+        width: 100%;
+    }
+    .div__projetos{
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .div_container__projetos{
+        margin-right: 0.5rem;
+        margin-left: 1rem;
+    }
 }

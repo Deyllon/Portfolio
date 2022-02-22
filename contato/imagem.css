@@ -3,3 +3,8 @@
     height: 3rem;
     margin-top: 7rem;
 }
+@media screen and (max-width:767px){
+    .imagem__contato{
+        margin-top: 4.5rem;
+    }
+}

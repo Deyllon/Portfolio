@@ -11,3 +11,8 @@
     display: grid;
     grid-template-columns: 80% 20%;
 }
+@media screen and (max-width:767px){
+    .section__sobre{
+        grid-template-columns: 70% 30%;
+    }
+}
