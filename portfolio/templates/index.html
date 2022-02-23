@@ -1,77 +1,86 @@
 <!DOCTYPE html>
+{% load embed_video_tags %}
+{% load static %}
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="body.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="div.css">
-    <link rel="stylesheet" href="header/header.css">
-    <link rel="stylesheet" href="header/titulo.css">
-    <link rel="stylesheet" href="header/div.css">
-    <link rel="stylesheet" href="header/link.css">
-    <link rel="stylesheet" href="sobre/section.css">
-    <link rel="stylesheet" href="sobre/titulo.css">
-    <link rel="stylesheet" href="sobre/paragrafo.css">
-    <link rel="stylesheet" href="projetos/section.css">
-    <link rel="stylesheet" href="projetos/titulo.css">
-    <link rel="stylesheet" href="projetos/video.css">
-    <link rel="stylesheet" href="projetos/div.css">
-    <link rel="stylesheet" href="contato/imagem.css">
-    <link rel="stylesheet" href="contato/section.css">
-    <link rel="stylesheet" href="contato/div.css">
-    <link rel="stylesheet" href="contato/titulo.css">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/body.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/div.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header/titulo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header/div.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header/link.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sobre/section.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sobre/titulo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sobre/paragrafo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projetos/section.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projetos/titulo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projetos/video.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projetos/div.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contato/imagem.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contato/section.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contato/div.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contato/titulo.css' %}">
 </head>
 <body class="body">
     <header class="header__header">
-        <h1 class="titulo__header">Portfolio de Deyllon ramos</h1>   
+        <h1 class="titulo__header"><a class="link__header" href="#sobre_contatos"> Portfolio de Deyllon</a></h1>   
     </header> 
     <main class="main">   
        <div class="div">
-            <div class="div__sobre_contatos" >
-                
+            <div id="sobre_contatos" class="div__sobre_contatos" >    
                 <section id="section_sobre" class="section__sobre--inativo">
                     <p id="paragrafo_sobre" class="paragrafo__sobre--inativo">Sou estudante do terceiro periodo de  Analise e desenvolvimento de sistemas na UNIASSELVI, 
                         atualmente possuo conhecimentos em HTML, CSS, JavaScript, Python, Django, Django Rest Framework, 
                         FastAPI , Flask e Docker. Tenho muita vontade de aprender e crescer profissionalmente. Resido em Olinda/Pe.</p>
                     <h3 id="titulo_sobre" onclick="sobre()" class="titulo__sobre--inativo">Sobre</h3>
-                </section>
-                
+                </section>              
                 <section id="section_contato" class="section__contato--inativo">
                     <ul id="lista_contato" class="lista__contato--inativo">
                         <li class="item__contato">
-                            <h4 class="titulo_card__contato">Github</h4>
-                            <img class="imagem__contato" src="logotipo-do-github.png" alt="Github"> 
+                            <a class="link__header" href="https://github.com/Deyllon" target="_blank">
+                                <h4 class="titulo_card__contato">Github</h4>
+                                <img class="imagem__contato" src="{% static 'imagens/logotipo-do-github.png' %}" alt="Github"> 
+                            </a>
                         </li>
                         <li class="item__contato"> 
-                            <h4 class="titulo_card__contato">Linkedin</h4> 
-                            <img class="imagem__contato" src="logotipo-do-linkedin.png" alt="Linkedin"> 
+                            <a class="link__header" href="https://www.linkedin.com/in/deyllon-ramos-558b62225/" target="_blank">
+                                <h4 class="titulo_card__contato">Linkedin</h4> 
+                                <img class="imagem__contato" src="{% static 'imagens/logotipo-do-linkedin.png' %}" alt="Linkedin"> 
+                            </a>
                         </li>
                         <li class="item__contato"> 
-                            <h4 class="titulo_card__contato">Email</h4> 
-                            <img class="imagem__contato" src="novo-envelope-de-email.png" alt="Email"> 
+                            <a class="link__header" href="mailto:deyllonp986@gmail.com">
+                                <h4 class="titulo_card__contato">Email</h4> 
+                                <img class="imagem__contato" src="{% static 'imagens/novo-envelope-de-email.png' %}" alt="Email"> 
+                            </a>
                         </li>
                     </ul>
                     <h3 onclick="contato()" id="titulo_contato" class="titulo__contato--inativo">Contato</h3>
                 </section>
             </div>
-            <div>
-                <section class="section__projetos" >
-                    <ul id="lista_projeto" class="div_container__projetos">
-                        <li onclick="carrosel()" class="div__projetos">
-                            <h4 class="titulo__projetos--video">Thingram</h4>
-                            <iframe class="video__projetos" src="https://www.youtube.com/embed/3qH1VLixh4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </li>
-                        <li onclick="carrosel()" class="div__projetos">
-                            <h4 class="titulo__projetos--video">Thingram</h4>
-                            <iframe class="video__projetos" src="https://www.youtube.com/embed/3qH1VLixh4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </li>
-                    </ul>
-                </section>
-            </div>
-       </div>
+            {% if videos %}    
+                <div>
+                    <section class="section__projetos" >
+                        <ul id="lista_projeto" class="div_container__projetos">
+                            {% for v in videos %}    
+                                <li onclick="carrosel()" class="div__projetos">
+                                    <h4 class="titulo__projetos--video">{{v.titulo}}</h4>
+                                    {% video v.video as x %}
+                                        <iframe src="{{x.url}}" class="video__projetos">
+                                        </iframe>
+                                    {% endvideo %}      
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                </div>   
+            {% endif %}
+        </div>
     </main>   
     <script>
         function sobre(){
@@ -125,8 +134,7 @@
                 imx = 0
             }
             imagem.style.transform = `translateX(${-imx * 100}%)`
-        }
-        
+        }     
     </script>
 </body>
 </html>
