@@ -9,7 +9,6 @@ const icon3 = folder3.querySelector(".clicable");
 dragElement(folder1, icon1);
 dragElement(folder2, icon2);
 dragElement(folder3, icon3);
-dragElement(cobrinha, icon4);
 
 function getAllDraggables() {
   return Array.from(
