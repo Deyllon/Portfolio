@@ -25,7 +25,7 @@ function openWindow(title) {
           wrapper.className = "div-sobre-mim";
           const img = document.createElement("img");
           img.className = "img-sobre-mim";
-          img.src = "../img/notebook.png";
+          img.src = "./img/notebook.png";
           img.alt = "Sobre mim";
           const p = document.createElement("p");
           p.textContent = "Sobre Mim";
@@ -45,7 +45,7 @@ function openWindow(title) {
           wrapper.className = "div-sobre-mim";
           const img = document.createElement("img");
           img.className = "img-sobre-mim";
-          img.src = "../img/notebook.png";
+          img.src = "./img/notebook.png";
           img.alt = "Como virei techlead";
           const p = document.createElement("p");
           p.textContent = "Como virei techlead";
@@ -65,7 +65,7 @@ function openWindow(title) {
           wrapper.className = "div-sobre-mim";
           const img = document.createElement("img");
           img.className = "img-sobre-mim";
-          img.src = "../img/fully.png";
+          img.src = "./img/fully.png";
           img.alt = "Fully";
           const p = document.createElement("p");
           p.textContent = "Fully";
