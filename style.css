@@ -117,11 +117,12 @@ footer {
 }
 
 .start-menu {
-  display: grid;
-  grid-column: 1;
-  grid-area: 3;
+  display: grid; /* mantém grid interno */
+  grid-template-rows: auto 1fr;
+  position: absolute;
   width: 18rem;
   height: 28rem;
+  bottom: 2.2rem;
   background: linear-gradient(to bottom, #2a64d6, #164199);
   border: 2px solid #0c2a66;
   border-radius: 0.3rem;

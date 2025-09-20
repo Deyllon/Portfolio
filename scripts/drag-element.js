@@ -1,12 +1,10 @@
 const folder1 = document.getElementById("folder1");
 const folder2 = document.getElementById("folder2");
 const folder3 = document.getElementById("folder3");
-const cobrinha = document.getElementById("cobrinha");
 
 const icon1 = folder1.querySelector(".clicable");
 const icon2 = folder2.querySelector(".clicable");
 const icon3 = folder3.querySelector(".clicable");
-const icon4 = cobrinha.querySelector(".clicable");
 
 dragElement(folder1, icon1);
 dragElement(folder2, icon2);
@@ -32,12 +30,13 @@ function dragElement(elmnt, handle) {
     pos3 = 0,
     pos4 = 0;
   let onMove, onUp;
+  let hasMoved = false; // <-- 1. Variável para rastrear o movimento
 
   const startDrag = (e) => {
     e.preventDefault();
-
     bringToFront(elmnt);
 
+    hasMoved = false; // <-- Reseta a variável a cada novo clique
     pos3 = e.clientX;
     pos4 = e.clientY;
 
@@ -48,6 +47,12 @@ function dragElement(elmnt, handle) {
 
     onMove = (ev) => {
       ev.preventDefault();
+
+      // Se o mouse se mover mais que um pouquinho, consideramos um arrasto
+      if (Math.abs(pos3 - ev.clientX) > 5 || Math.abs(pos4 - ev.clientY) > 5) {
+        hasMoved = true; // <-- 2. Marca que o elemento foi movido
+      }
+
       pos1 = pos3 - ev.clientX;
       pos2 = pos4 - ev.clientY;
       pos3 = ev.clientX;
@@ -55,10 +60,8 @@ function dragElement(elmnt, handle) {
 
       const maxWidth = window.innerWidth;
       const maxHeight = window.innerHeight;
-
-      const rect = elmnt.getBoundingClientRect();
-      const elemWidth = rect.width;
-      const elemHeight = rect.height;
+      const elemWidth = elmnt.offsetWidth;
+      const elemHeight = elmnt.offsetHeight;
 
       let newTop = elmnt.offsetTop - pos2;
       let newLeft = elmnt.offsetLeft - pos1;
@@ -73,10 +76,24 @@ function dragElement(elmnt, handle) {
     onUp = () => {
       document.removeEventListener("pointermove", onMove);
       document.removeEventListener("pointerup", onUp);
+
+      // 3. Se moveu, prepara para bloquear o próximo clique
+      if (hasMoved) {
+        elmnt.addEventListener("click", blockClick, {
+          capture: true,
+          once: true,
+        });
+      }
     };
 
     document.addEventListener("pointermove", onMove);
     document.addEventListener("pointerup", onUp);
+  };
+
+  // 4. Função que efetivamente bloqueia o clique
+  const blockClick = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
   };
 
   handle.addEventListener("pointerdown", startDrag);
