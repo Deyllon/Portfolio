@@ -1,0 +1,68 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset elementos comuns */
+html,
+body {
+  height: 100%;
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+/* Remove estilos de listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove sublinhado de links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove bordas e background de botões */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Remove estilo de imagens e vídeos */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Tabelas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Inputs e selects */
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Força que elementos de bloco ocupem 100% da largura */
+body > * {
+  box-sizing: border-box;
+}

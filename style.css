@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+
+  background-image: url("./img/windowsxp.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr;
+}
+
+main {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  max-width: 40rem;
+  justify-self: center;
+  grid-column: 2 / 8;
+}
+.clicable {
+  cursor: pointer;
+  height: 5rem;
+  width: 5rem;
+}
+
+.folder {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  width: 5rem;
+  height: 6.5rem;
+}
+
+.cobrinha {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  width: 8rem;
+  height: 6.5rem;
+}
+
+.start-on-left {
+  gap: 16px;
+  padding: 16px;
+}
+.texto {
+  text-align: center;
+  color: #fff;
+}
+
+footer {
+  grid-area: ft;
+  grid-column: 1 / -1;
+  background: #0055aa;
+}
+
+.start {
+  display: flex;
+  align-items: center;
+  width: 6rem;
+  background: linear-gradient(to bottom, #3dd64f, #1b8e24);
+  border: 2px solid #0c5e14;
+  border-radius: 0rem 0.8rem 0.8rem 0rem;
+  padding: 0rem 0.3rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.start p {
+  padding-left: 0.3rem;
+}
+
+.start:hover {
+  filter: brightness(1.1);
+}
+
+.windows {
+  width: 2rem;
+}
+
+.taskbar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task {
+  background: #2e5cc9;
+  border: 1px solid #1c3f99;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.clock {
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.start-menu {
+  display: grid;
+  grid-column: 1;
+  grid-area: 3;
+  width: 18rem;
+  height: 28rem;
+  background: linear-gradient(to bottom, #2a64d6, #164199);
+  border: 2px solid #0c2a66;
+  border-radius: 0.3rem;
+  display: none;
+  flex-direction: column;
+  color: white;
+  font-family: Arial, sans-serif;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  z-index: 10000;
+  border-top-right-radius: 0.5rem;
+}
+
+.start-menu-header {
+  background: #2a64d6;
+  padding: 1.2rem;
+  font-weight: bold;
+}
+
+.start-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 0.8rem;
+  cursor: pointer;
+}
+
+.start-menu-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.start-menu-item img {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.start-menu-container {
+  background-color: #d2e4fc;
+  height: 23rem;
+}
+
+.start-menu-item span {
+  color: black;
+}
+
+.window {
+  position: fixed;
+  width: 40vw;
+  height: 40vh;
+  top: calc(50% - 25vh);
+  left: calc(50% - 20vw);
+  background-color: #c0c0c0;
+  border: 2px solid #000;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.window-header {
+  background-color: #000080;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.window-content {
+  flex: 1;
+  padding: 10px;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.div-sobre-mim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 5rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.img-sobre-mim {
+  width: 2rem;
+  height: 2rem;
+}
+
+.oppened-file {
+  position: fixed;
+  width: 40vw;
+  height: 40vh;
+  top: calc(50% - 25vh);
+  left: calc(60% - 20vw);
+  background: #d2e4fc;
+  border: 2px solid #000;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.openned-file-header {
+  background-color: #000080;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.oppened-file-content {
+  flex: 1;
+  padding: 10px;
+  background-color: #fff;
+  overflow-y: auto;
+  max-height: calc(100% - 30px);
+}
